@@ -23,17 +23,10 @@ boot_cmd:
 run_cmd:
 - "echo hello, run command"
 k3os:
-  data_sources:
-  - cdrom
-  modules:
-  - kvm
-  sysctl:
-    kernel.printk: "4 4 1 7"
-    kernel.kptr_restrict: "1"
   ntp_servers:
   - 0.us.pool.ntp.org
   - 1.us.pool.ntp.org
-  password: $1$wQLxe05f$7PsedYUYVfVmwP6iEw1QE0
+  password: $1$eVSINn4S$s9QauHFfk9wcgfzTWI3du1
   labels:
     somekey: somevalue
   k3s_args:
