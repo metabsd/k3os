@@ -22,7 +22,6 @@ boot_cmd:
 - "echo hello, boot command"
 run_cmd:
 - "echo hello, run command"
-
 k3os:
   data_sources:
   - cdrom
