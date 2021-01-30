@@ -8,7 +8,7 @@ write_files:
     IPv4=192.168.2.14/255.255.255.0/192.168.2.1
     IPv6=off
     Nameservers=192.168.2.1
-hostname: k3os-node-01
+hostname: k3os-node-03
 k3os:
   data_sources:
   - cdrom
