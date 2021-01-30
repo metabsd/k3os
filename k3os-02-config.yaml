@@ -5,10 +5,10 @@ write_files:
   content: |-
     [service_eth0]
     Type=ethernet
-    IPv4=192.168.2.11/255.255.255.0/192.168.2.1
+    IPv4=192.168.2.12/255.255.255.0/192.168.2.1
     IPv6=off
     Nameservers=192.168.2.1
-hostname: k3os-master-01
+hostname: k3os-node-01
 k3os:
   data_sources:
   - cdrom
@@ -18,4 +18,5 @@ k3os:
   - 0.us.pool.ntp.org
   - 1.us.pool.ntp.org
   password: $1$eVSINn4S$s9QauHFfk9wcgfzTWI3du1
+  server_url: https://192.168.2.11:6443
   token: iT6gmQwLV4CYNZz3GfJy
