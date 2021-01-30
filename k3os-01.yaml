@@ -1,0 +1,42 @@
+ssh_authorized_keys:
+- github:metabsd
+write_files:
+- path: /var/lib/connman/default.config
+  content: |-
+    [service_eth0]
+    Type=ethernet
+    IPv4=192.168.2.11/255.255.255.0/192.168.2.1
+    IPv6=off
+    Nameservers=192.168.2.1
+- encoding: ""
+  content: |-
+    #!/bin/bash
+    echo hello, local service start
+  owner: root
+  path: /etc/local.d/example.start
+  permissions: '0755'
+hostname: k3os-01
+init_cmd:
+- "echo hello, init command"
+boot_cmd:
+- "echo hello, boot command"
+run_cmd:
+- "echo hello, run command"
+
+k3os:
+  data_sources:
+  - cdrom
+  modules:
+  - kvm
+  sysctl:
+    kernel.printk: "4 4 1 7"
+    kernel.kptr_restrict: "1"
+  ntp_servers:
+  - 0.us.pool.ntp.org
+  - 1.us.pool.ntp.org
+  password: $1$wQLxe05f$7PsedYUYVfVmwP6iEw1QE0
+  labels:
+    somekey: somevalue
+  k3s_args:
+  - server
+  - "--disable-agent"
