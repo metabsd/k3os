@@ -1,0 +1,27 @@
+ssh_authorized_keys:
+- github:metabsd
+write_files:
+- path: /var/lib/connman/default.config
+  content: |-
+    [service_eth0]
+    Type=ethernet
+    IPv4=192.168.2.12/255.255.255.0/192.168.2.1
+    IPv6=off
+    Nameservers=8.8.8.8
+hostname: k3os-master-02.192.168.2.12.xip.io
+k3os:
+  data_sources:
+  - cdrom
+  dns_nameservers:
+  - 8.8.8.8
+  ntp_servers:
+  - 0.us.pool.ntp.org
+  - 1.us.pool.ntp.org
+  password: $1$eVSINn4S$s9QauHFfk9wcgfzTWI3du1
+  token: KwZygQf2kor3scukxtbEnAyF89eUqSHJjtA37AKjWNgwMzqj7aG8q8NeGf5yvEv44K5SXGxmSyuEXzSEZHHM9KNFYerQ
+  k3s_args:
+    - server
+    - "-v=3"
+    - "--server=https://k3os-master-01.192.168.2.11.xip.io:6443"
+  taints:
+    - CriticalAddonsOnly=true:NoExecute

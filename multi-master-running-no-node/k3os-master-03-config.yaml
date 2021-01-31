@@ -5,10 +5,10 @@ write_files:
   content: |-
     [service_eth0]
     Type=ethernet
-    IPv4=192.168.2.12/255.255.255.0/192.168.2.1
+    IPv4=192.168.2.13/255.255.255.0/192.168.2.1
     IPv6=off
     Nameservers=8.8.8.8
-hostname: k3os-master-02.192-168-2-12.nip.io
+hostname: k3os-master-02.192.168.2.13.xip.io
 k3os:
   data_sources:
   - cdrom
@@ -22,6 +22,4 @@ k3os:
   k3s_args:
     - server
     - "-v=3"
-    - "--server=https://k3os-master-01.192-168-2-11.nip.io:6443"
-  taints:
-    - CriticalAddonsOnly=true:NoExecute
+    - "--server=https://k3os-master-01.192.168.2.11.xip.io:6443"

@@ -8,7 +8,7 @@ write_files:
     IPv4=192.168.2.11/255.255.255.0/192.168.2.1
     IPv6=off
     Nameservers=8.8.8.8
-hostname: k3os-master-01.192-168-2-11.nip.io
+hostname: k3os-master-01.192.168.2.11.xip.io
 k3os:
   data_sources:
   - cdrom
@@ -23,5 +23,3 @@ k3os:
     - server
     - "-v=3"
     - "--cluster-init"
-  taints:
-    - CriticalAddonsOnly=true:NoExecute

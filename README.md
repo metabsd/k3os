@@ -2,22 +2,32 @@
 
 Using cloud-init workaround with k3os.
 
-To find the right <id> `qm list`
+To find the right VM id `qm list`
+
 **TBD**
+Possibility to force a cloud-init method that is not compatible with the official one.
 ```
 mkdir -p /var/lib/vz/snippets
 cp -p k3os-01-config.yaml /var/lib/vz/snippets/
 qm set <id> --cicustom user=local:snippets/k3os-01-config.yaml
 ```
 
-For now I will use tiny url during the boot process.. Manually ..
+For now I will use tiny url during the boot process, manually...
 
-MASTER-1 : https://git.io/JtBtL
-MASTER-2 : https://git.io/JtBtJ
-MASTER-3 : https://git.io/JtBtU
-NODE-1 : https://git.io/Jt4pn
-NODE-2 : https://git.io/JtBeI
-NODE-3 : https://git.io/JtBe8
+## Setup 3 Master 3 Node
+
+MASTER-1 : 
+MASTER-2 : 
+MASTER-3 : 
+NODE-1 : 
+NODE-2 : 
+NODE-3 : 
+
+## Setup only 3 master no node:
+
+MASTER-1 : 
+MASTER-2 : 
+MASTER-3 : 
 
 # Installing Rancher on K3os
 
@@ -60,7 +70,7 @@ Install rancher with self-signed cert.
 ```shell
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
-  --set hostname=rancher.192-168-2-11.nip.io
+  --set hostname=rancher-meta.mooo.com
 ```
 
 Keep an eye on the deployement
