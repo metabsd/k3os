@@ -80,3 +80,7 @@ Keep an eye on the deployement
 
 State of the deployement
 `kubectl -n cattle-system get deploy rancher`
+
+## NEXT STEP
+
+Installing AWX : [AWX](AWX.md)
