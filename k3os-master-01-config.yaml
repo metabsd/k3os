@@ -24,5 +24,4 @@ k3os:
     - "-v=3"
     - "--cluster-init"
   taints:
-    - k3s-controlplane=true:NoExecute
-    - k3s-controlplane=true:NoSchedule
+    - CriticalAddonsOnly=true:NoExecute
