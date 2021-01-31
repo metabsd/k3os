@@ -18,5 +18,5 @@ k3os:
   - 0.us.pool.ntp.org
   - 1.us.pool.ntp.org
   password: $1$eVSINn4S$s9QauHFfk9wcgfzTWI3du1
-  server_url: https://k3os-master-01.192-168-2-11.nip.io:6443
+  server_url: https://meta-k3os-master.mooo.com:6443
   token: KwZygQf2kor3scukxtbEnAyF89eUqSHJjtA37AKjWNgwMzqj7aG8q8NeGf5yvEv44K5SXGxmSyuEXzSEZHHM9KNFYerQ
