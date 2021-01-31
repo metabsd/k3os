@@ -1,0 +1,31 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: awx-postgres-configuration
+stringData:
+  host: postgresql.tower-awx.svc.cluster.local
+  port: '5432'
+  database: TBD
+  username: TBD
+  password: TBD
+type: Opaque
+---
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+spec:
+  deployment_type: awx
+  tower_replicas: 1
+  tower_admin_user: admin2020
+  tower_admin_email: bmartinp@gmail.com
+  tower_admin_password: 9DPgYdoc9cxAA73qtgXdfKDYETq
+  tower_broadcast_websocket_secret: G3rU6iEdUmLn4xH7PAstABWuNCL
+  tower_ingress_type: Ingress
+  tower_hostname: awx-meta.mooo.com
+  tower_task_image: ansible/awx:15.0.1 # replace this with desired image
+  tower_web_image: ansible/awx:15.0.1 # replace this with desired image
+  external_database: true
+  # Je veux essayer sans ce parametre en premier. Plus securitaire.
+  # tower_task_privileged: true
