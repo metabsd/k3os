@@ -8,7 +8,7 @@ write_files:
     IPv4=192.168.2.13/255.255.255.0/192.168.2.1
     IPv6=off
     Nameservers=8.8.8.8
-hostname: k3os-master-02.192.168.2.13.xip.io
+hostname: k3os-master-03.192.168.2.13.xip.io
 k3os:
   data_sources:
   - cdrom

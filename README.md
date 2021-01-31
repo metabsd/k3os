@@ -16,8 +16,8 @@ For now I will use tiny url during the boot process, manually...
 
 ## Setup 3 Master 3 Node
 
-MASTER-1 : 
-MASTER-2 : 
+MASTER-1 : https://git.io/JtBK5
+MASTER-2 : https://git.io/JtBKF
 MASTER-3 : 
 NODE-1 : 
 NODE-2 : 
