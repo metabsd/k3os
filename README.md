@@ -14,6 +14,8 @@ qm set <id> --cicustom user=local:snippets/k3os-01-config.yaml
 
 For now I will use tiny url during the boot process, manually...
 
+![img.png](img.png)
+
 ## Setup 3 Master 3 Node
 
 MASTER-1 : https://git.io/JtBK5
