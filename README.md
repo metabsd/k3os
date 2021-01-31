@@ -18,16 +18,16 @@ For now I will use tiny url during the boot process, manually...
 
 MASTER-1 : https://git.io/JtBK5
 MASTER-2 : https://git.io/JtBKF
-MASTER-3 : 
-NODE-1 : 
-NODE-2 : 
-NODE-3 : 
+MASTER-3 : https://git.io/JtBKj
+NODE-1 : https://git.io/JtB6f
+NODE-2 : https://git.io/JtB6J
+NODE-3 : https://git.io/JtB6U
 
 ## Setup only 3 master no node:
 
-MASTER-1 : 
-MASTER-2 : 
-MASTER-3 : 
+MASTER-1 : https://git.io/JtB6T
+MASTER-2 : https://git.io/JtB6k
+MASTER-3 : https://git.io/JtB6I
 
 # Installing Rancher on K3os
 
